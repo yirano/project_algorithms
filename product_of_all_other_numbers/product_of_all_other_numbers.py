@@ -7,10 +7,8 @@ from functools import reduce
 
 def product_of_all_other_numbers(arr):
     # Your code here
-    temp = []
     prod = []
     for num in range(0, len(arr)):
-        # temp =
         prod.append(reduce(lambda x, y: x*y,
                            [x for i, x in enumerate(arr) if i != num]))
     return prod

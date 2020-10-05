@@ -4,7 +4,7 @@ Returns: a List of integers
 '''
 
 
-def moving_zeroes(arr):
+def moving_zeroes_1(arr):
     # Your code here
     ind = []
     for i in range(0, len(arr)):
@@ -17,12 +17,23 @@ def moving_zeroes(arr):
     return arr
 
 
-# arr = [0, 0, 0, 0, 3, 2, 1]
-# arr = [0, 0, 0, 3, 0, 2, 1]
-# print(moving_zeroes(arr))
+def moving_zeroes(arr, i=1):
+    if i == len(arr) + 1:
+        return arr
+    if arr[len(arr)-i] == 0:
+        arr.pop(len(arr)-i)
+        arr.append(0)
 
-if __name__ == '__main__':
-    # Use the main function here to test out your implementation
-    arr = [0, 3, 1, 0, -2]
+    return moving_zeroes(arr, i+1)
 
-    print(f"The resulting of moving_zeroes is: {moving_zeroes(arr)}")
+
+    # arr = [0, 0, 0, 0, 3, 2, 1]
+arr = [0, 0, 0, 3, 0, 2, 1]
+print(moving_zeroes(arr))
+
+
+# if __name__ == '__main__':
+#     # Use the main function here to test out your implementation
+#     arr = [0, 3, 1, 0, -2]
+
+#     print(f"The resulting of moving_zeroes is: {moving_zeroes(arr)}")

@@ -6,7 +6,6 @@ Returns: an integer
 
 def eating_cookies(n, arr=[]):
     dict = [1, 1, 2, 4]
-    total = 0
     i = 4
     if n < 4:
         return dict[n]

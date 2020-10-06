@@ -4,7 +4,7 @@ Returns: an integer
 '''
 
 
-def eating_cookies(n):
+def eating_cookies(n, arr=[]):
     dict = [1, 1, 2, 4]
     total = 0
     i = 4
@@ -18,7 +18,7 @@ def eating_cookies(n):
     return dict[len(dict)-1]
 
 
-print(eating_cookies(50))
+print(eating_cookies(500))
 
 # if __name__ == "__main__":
 #     # Use the main function here to test out your implementation
